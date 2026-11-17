@@ -1,1 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MultiFix Home Solution & Service Center</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="logo">MultiFix</div>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#services">Services</a>
+      <a href="#scrap">Scrap</a>
+      <button class="btn-primary" onclick="openBooking('General Service')">Book Now</button>
+    </nav>
+  </header>
+
+  <!-- Auto-Rotating Hero Banner -->
+  <section class="hero-banner">
+    <div class="hero-text">
+      <h1 id="banner-title">Appliance Repair at Your Doorstep</h1>
+      <p id="banner-desc">Fast, reliable repair for AC, Refrigerator, Washing Machine & Geyser by certified engineers.</p>
+      <br>
+      <button class="btn-primary" onclick="openBooking('Doorstep Repair')">Book a Service</button>
+    </div>
+    <img id="banner-img" class="hero-img" src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=600" alt="Banner">
+  </section>
+
+  <!-- Warranty Strip -->
+  <div class="stats-strip">
+    <div><h3>5,000+</h3><p>Happy Customers</p></div>
+    <div><h3>10+ Yrs</h3><p>Experience</p></div>
+    <div><h3>60 Min</h3><p>Fast Response</p></div>
+    <div><h3>30 Day</h3><p>Service Warranty</p></div>
+  </div>
+
+  <!-- About Section & 3 Pillars -->
+  <section id="about" class="section">
+    <div class="card-box">
+      <h2>About MultiFix Home Solution & Service Center</h2>
+      <p style="margin-top:8px; color:#475569;">
+        MultiFix is your trusted 3-in-1 home appliance partner. Whether you want to buy a new energy-efficient appliance, book doorstep repair with a 30-day warranty, or sell old and damaged appliances for instant cash—we handle everything at your doorstep.
+      </p>
+    </div>
+
+    <div class="grid-3">
+      <div class="card-box">
+        <h3>🛒 Appliance Sales</h3>
+        <p>Brand new AC, Fridge, Washing Machine & Geyser at best prices.</p>
+      </div>
+      <div class="card-box">
+        <h3>🛠️ Doorstep Service</h3>
+        <p>Same-day repair & servicing with 30-day warranty.</p>
+      </div>
+      <div class="card-box">
+        <h3>♻️ Old Scrap Pickup</h3>
+        <p>Sell broken or dead appliances for instant cash or exchange.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Sales Section -->
+  <section id="products" class="section">
+    <h2 class="section-title">Buy Quality Home Appliances</h2>
+    <div class="grid-4" id="product-list"></div>
+  </section>
+
+  <!-- Service Rate Card Section -->
+  <section id="services" class="section">
+    <h2 class="section-title">Professional Doorstep Services (30-Day Warranty)</h2>
+    <div class="grid-4" id="service-list"></div>
+  </section>
+
+  <!-- Scrap Section -->
+  <section id="scrap" class="section">
+    <div class="card-box scrap-grid">
+      <div>
+        <h2>Old, Broken, or Damaged Appliance? Sell for Instant Cash!</h2>
+        <p style="margin: 12px 0; color:#475569;">
+          Do not let dead, rusted, or broken home appliances take up space in your home. We buy old ACs, Refrigerators, Washing Machines, Geysers, and electronic scrap directly from your doorstep at best market rates with instant UPI or cash payment.
+        </p>
+        <button class="btn-primary" onclick="openBooking('Scrap Pickup Enquiry')">Book Scrap Pickup</button>
+      </div>
+      <div class="scrap-blue-box">
+        <h3>We Buy All Damaged Units</h3>
+        <p style="font-size:13px; color:#94a3b8;">Free doorstep pickup & instant spot payment</p>
+        <div style="display:flex; justify-content:space-between;">
+          <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400" alt="Old AC">
+          <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=400" alt="Scrap">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section class="section">
+    <h2 class="section-title">Our Work in Action (Videos)</h2>
+    <div class="grid-3">
+      <div class="item-card">
+        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=500" alt="AC Foam Wash">
+        <h4>▶ AC Foam-Jet Deep Cleaning</h4>
+      </div>
+      <div class="item-card">
+        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=500" alt="Fridge Gas">
+        <h4>▶ Refrigerator Gas Charging</h4>
+      </div>
+      <div class="item-card">
+        <img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=500" alt="Washing Machine">
+        <h4>▶ Washing Machine Drum Repair</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Feedback Section -->
+  <section class="section">
+    <h2 class="section-title">What Our Customers Say</h2>
+    <div class="feedback-card">
+      <p id="feedback-text" style="font-style: italic; font-size: 16px;">"Very fast AC foam service! Cooling improved immediately. Highly recommended."</p>
+      <h4 id="feedback-author" style="margin-top: 10px; color: #0284c7;">— Rahul Sharma ⭐⭐⭐⭐⭐</h4>
+    </div>
+  </section>
+
+  <!-- Booking Section -->
+  <section id="booking-section" class="section">
+    <div class="booking-form">
+      <h2 style="margin-bottom: 15px;">Book a Service / Product Enquiry</h2>
+      <form onsubmit="submitBooking(event)">
+        <label>Your Name *</label>
+        <input type="text" id="cust-name" placeholder="Enter your full name" required>
+
+        <label>Mobile Number *</label>
+        <input type="tel" id="cust-phone" placeholder="Enter 10-digit mobile number" required>
+
+        <label>Selected Service / Product *</label>
+        <input type="text" id="cust-service" value="AC Service (₹459)" required>
+
+        <label>Full Address & Landmark *</label>
+        <textarea id="cust-address" rows="3" placeholder="House No, Street, Village/Area, Pin Code" required></textarea>
+
+        <button type="submit" class="btn-primary" style="width:100%; font-size:16px;">Confirm Booking</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <h3>MultiFix Home Solution & Service Center</h3>
+    <p style="margin-top:8px;">📍 Service Location: Bhebia Chowmatha, Near Indian Petrol Pump, PIN 743456</p>
+    <p>📞 Call / WhatsApp: +91 98918 19104 | ✉️ Email: support@multifix.in</p>
+    
+    <div class="social-icons">
+      <a href="https://whatsapp.com" target="_blank">💬 WhatsApp Channel</a>
+      <a href="https://youtube.com" target="_blank">▶️ YouTube</a>
+      <a href="https://instagram.com" target="_blank">📸 Instagram</a>
+      <a href="https://facebook.com" target="_blank">📘 Facebook</a>
+    </div>
+    <p style="margin-top:20px; font-size:13px; color:#64748b;">© 2026 MultiFix Home Solution & Service Center. All rights reserved.</p>
+  </footer>
+
+  <!-- Modal -->
+  <div id="detail-modal" class="modal" onclick="closeModal()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <h3 id="modal-title">Title</h3>
+      <p id="modal-price" class="price-tag">₹0</p>
+      <p id="modal-desc" style="margin: 12px 0; color:#475569;">Details here...</p>
+      <button id="modal-book-btn" class="btn-primary" style="width:100%;">Book Now</button>
+      <button onclick="closeModal()" style="width:100%; margin-top:8px; padding:8px; border:none; border-radius:6px; cursor:pointer;">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
